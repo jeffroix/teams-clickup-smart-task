@@ -1,0 +1,23 @@
+{
+  "name": "teams-clickup-smart-task",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Microsoft Teams message extension for creating smart ClickUp tasks from Teams messages.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "smoke": "npm run build && node dist/tests/smoke.js",
+    "start": "node --env-file=.env dist/app.js"
+  },
+  "dependencies": {
+    "botbuilder": "^4.23.3",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.3"
+  }
+}

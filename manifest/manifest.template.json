@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
+  "version": "0.1.0",
+  "id": "${MICROSOFT_APP_ID}",
+  "developer": {
+    "name": "Your Company",
+    "websiteUrl": "https://example.com",
+    "privacyUrl": "https://example.com/privacy",
+    "termsOfUseUrl": "https://example.com/terms"
+  },
+  "name": {
+    "short": "Smart ClickUp Task",
+    "full": "Create smart ClickUp task from Teams"
+  },
+  "description": {
+    "short": "Create a ClickUp task from a Teams message with AI help.",
+    "full": "Turns a Teams message or thread into a reviewed ClickUp task proposal before creating the task."
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#005a9c",
+  "bots": [
+    {
+      "botId": "${MICROSOFT_APP_ID}",
+      "scopes": ["personal", "team", "groupchat"],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "${MICROSOFT_APP_ID}",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "createSmartClickUpTask",
+          "type": "action",
+          "title": "Create smart ClickUp task",
+          "description": "Turn a Teams message into a reviewed ClickUp task.",
+          "context": ["message"]
+        }
+      ]
+    }
+  ],
+  "permissions": ["identity", "messageTeamMembers"],
+  "validDomains": ["${APP_DOMAIN}"]
+}

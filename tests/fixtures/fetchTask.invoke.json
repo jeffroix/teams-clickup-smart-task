@@ -1,0 +1,35 @@
+{
+  "type": "invoke",
+  "name": "composeExtension/fetchTask",
+  "serviceUrl": "https://smba.trafficmanager.net/emea/",
+  "conversation": {
+    "id": "19:test-thread@thread.v2"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "tenant-123"
+    },
+    "team": {
+      "id": "team-123"
+    },
+    "channel": {
+      "id": "channel-123"
+    }
+  },
+  "value": {
+    "commandId": "createSmartClickUpTask",
+    "messagePayload": {
+      "id": "1677789000",
+      "linkToMessage": "https://teams.microsoft.com/l/message/channel-123/1677789000",
+      "body": {
+        "content": "<div>Please create a task to draft the regulatory summary by Friday.</div>"
+      },
+      "from": {
+        "user": {
+          "displayName": "Pat Example",
+          "id": "user-123"
+        }
+      }
+    }
+  }
+}
